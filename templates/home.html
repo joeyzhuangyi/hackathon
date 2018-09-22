@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hoolie Tutoring</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+{% extends 'provider/layout.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+      <div class="col-md-3 ">
+
+      </div>
+      <div class="col-md-12">
+          <div class="card">
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col-md-12">
+                          <h1 class="my-4"> <small>Search</small></h1>
+                            <div class="container">
+                            <div class="row">
+                               <div id="custom-search-input">
+                                    <div class="input-group col-md-12">
+                                        <input type="text" class="  search-query form-control" placeholder="Search" />
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-primary" type="button">
+                                                <span class=" glyphicon glyphicon-search"></span>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                          <hr>
+                          <tr>
+                            <td>
+                                {% for i in hashtags%}
+                                <button class="btn btn-primary">{{ i }}</button>
+                                {% endfor %}
+                            </td>
+                            </tr>
+                          <hr>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-12">
+                          <form>
+                                <div class="form-group row">
+                                  <label for="name" class="col-4 col-form-label">Full Name</label>
+                                  <div class="col-8">
+                                      {% for i in patients %}
+                                      <h4>{{i.first_name}} {{i.surname}}</h4>
+                                      {% endfor %}
+                                  </div>
+                                </div>
+                              </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+</body>
+
+
