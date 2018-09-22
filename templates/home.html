@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
 
+<html lang="en">
+{% extends '__header.html' %}
+{% block body %}
 <style>
 .loader {
   border: 16px solid #f3f3f3;
@@ -34,8 +36,7 @@
 </head>
 
 <body>
-{% extends '_header.html' %}
-{% block body %}
+
 <div class="container">
     <div class="row">
       <div class="col-md-3 ">
@@ -115,7 +116,8 @@
       </div>
     </div>
   </div>
-{% endblock %}
-</body>
 
+</body>
+{% endblock %}
+</html>
 

@@ -1,4 +1,4 @@
-from flask import Flask,render_template,request
+from flask import Flask,render_template,request,url_for
 from classes import user
 app = Flask(__name__)
 """""""""
@@ -13,7 +13,9 @@ def home():
     if request.method == "POST":
         pass
     return render_template("home.html",looking= False);
-
+@app.route('/hello')
+def hello():
+    return "hello world"
 
 if __name__ == '__main__':
     app.run( debug=True)
