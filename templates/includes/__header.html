@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<head>
+  <title>patient_header</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="nav navbar-nav">
+            <a class="navbar-brand" href="{{url_for('patient_home', username=current_user.first_name)}}">E-Health</a>
+        </div>
+        <ul class = "nav navbar-nav" style="display:inline">
+            <li><a href="{{url_for('patient_home', username=current_user.first_name)}}"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+            <li><a href="{{url_for('patient_profile', username=current_user.first_name)}}"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+            <li><a href="{{url_for('patient_appointments', username=current_user.first_name)}}"><span class="glyphicon glyphicon-th-list"></span> Messages</a></li>
+            <li><a href="{{url_for('patient_search_centre', username=current_user.first_name)}}"><span class="glyphicon glyphicon-education"></span> Tutoring</a></li>
+            <li><a href="{{url_for('patient_search_centre', username=current_user.first_name)}}"><span class="glyphicon glyphicon-search"></span> Looking</a></li>
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right" style="display:inline">
+            <li><a href="{{ url_for('logout') }}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+        </ul>
+        </div>
+    </div>
+</nav>
+</body>
