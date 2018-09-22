@@ -19,6 +19,9 @@ def hello():
 @app.route('/profile')
 def profile():
     return render_template('profile.html')
+@app.route('/tutor')
+def tutor():
+    return render_template()
 
 if __name__ == '__main__':
     app.run( debug=True)
