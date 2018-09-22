@@ -19,7 +19,7 @@ ul{
 
 .button_1{
   height:38px;
-  background:#e8491d;
+  background:#a4eadd;
   border:0;
   padding-left: 20px;
   padding-right:20px;
@@ -40,7 +40,7 @@ header{
   color:#ffffff;
   padding-top:30px;
   min-height:70px;
-  border-bottom:#e8491d 3px solid;
+  border-bottom:#a4eadd 3px solid;
 }
 
 header a{
@@ -70,7 +70,7 @@ header nav{
 }
 
 header .highlight, header .current a{
-  color:#e8491d;
+  color:#a4eadd;
   font-weight:bold;
 }
 
@@ -128,7 +128,7 @@ header a:hover{
   float:left;
   text-align: center;
   width:30%;
-  bottom:200%; 
+  bottom:200%;
   padding:10px;
 }
 
@@ -167,7 +167,7 @@ footer{
   padding:20px;
   margin-top:20px;
   color:#ffffff;
-  background-color:#e8491d;
+  background-color:#a4eadd;
   text-align: center;
 }
 
