@@ -103,6 +103,7 @@
                       </script>
 
                     <div id="spinner">
+
                       {% if looking %}
 
                        <div class="col-md-2" style="align-items: center">
@@ -126,6 +127,24 @@
 
                       {% endif %}
                       </div>
+
+                      <script type="text/javascript">
+                          setTimeout(function() {
+                            console.log('show text now');
+                            document.getElementById('results').style.display = 'none';
+                        }, 3000);
+                      </script>
+
+                      <div id="results">
+
+                          <h6>
+                              <small><b>Cristian Bernal</b> would like to tutor you</small>
+                              <a href="href={{url_for('profile2')}}"></a>
+                              <button href="href={{url_for('profile2')}}">Confirm</button>
+                          </h6>
+
+                      </div>
+
                     </div>
                     	<section id="boxes">
       						<div class="flex-container">
