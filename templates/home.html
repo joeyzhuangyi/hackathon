@@ -20,214 +20,6 @@
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-
-    body{
-  font: 15px/1.5 Century Gothic;
-  padding:0;
-  margin:0;
-  background-color:#f4f4f4;
-}
-
-/* Global */
-.container{
-  width:80%;
-  margin:auto;
-  overflow:hidden;
-}
-
-ul{
-  margin:0;
-  padding:0;
-}
-
-.button_1{
-  height:38px;
-  background:#e8491d;
-  border:0;
-  padding-left: 20px;
-  padding-right:20px;
-  color:#ffffff;
-}
-
-.dark{
-  padding:15px;
-  background:#35424a;
-  color:#ffffff;
-  margin-top:10px;
-  margin-bottom:10px;
-}
-
-/* Header **/
-header{
-  background:#35424a;
-  color:#ffffff;
-  padding-top:30px;
-  min-height:70px;
-  border-bottom:#e8491d 3px solid;
-}
-
-header a{
-  color:#ffffff;
-  text-decoration:none;
-  text-transform: uppercase;
-  font-size:16px;
-}
-
-header li{
-  float:left;
-  display:inline;
-  padding: 0 20px 0 20px;
-}
-
-header #branding{
-  float:left;
-}
-
-header #branding h1{
-  margin:0;
-}
-
-header nav{
-  float:right;
-  margin-top:10px;
-}
-
-header .highlight, header .current a{
-  color:#e8491d;
-  font-weight:bold;
-}
-
-header a:hover{
-  color:#cccccc;
-  font-weight:bold;
-}
-
-/* Showcase */
-#showcase{
-  min-height:400px;
-  background:url('../img/showcase.jpg') no-repeat 0 -400px;
-  text-align:center;
-  color:#ffffff;
-}
-
-#showcase h1{
-  margin-top:100px;
-  font-size:55px;
-  margin-bottom:10px;
-}
-
-#showcase p{
-  font-size:20px;
-}
-
-/* Newsletter */
-#newsletter{
-  padding:15px;
-  color:#ffffff;
-  background:#35424a
-}
-
-#newsletter h1{
-  float:left;
-}
-
-#newsletter form {
-  float:right;
-  margin-top:15px;
-}
-
-#newsletter input[type="email"]{
-  padding:4px;
-  height:25px;
-  width:250px;
-}
-
-/* Boxes */
-#boxes{
-  margin-top:20px;
-}
-
-#boxes .box{
-  float:left;
-  text-align: center;
-  width:30%;
-  bottom:200%;
-  padding:10px;
-}
-
-#boxes .box img{
-  width:90px;
-}
-
-/* Sidebar */
-aside#sidebar{
-  float:right;
-  width:30%;
-  margin-top:10px;
-}
-
-aside#sidebar .quote input, aside#sidebar .quote textarea{
-  width:90%;
-  padding:5px;
-}
-
-/* Main-col */
-article#main-col{
-  float:left;
-  width:65%;
-}
-
-/* Services */
-ul#services li{
-  list-style: none;
-  padding:20px;
-  border: #cccccc solid 1px;
-  margin-bottom:5px;
-  background:#e6e6e6;
-}
-
-footer{
-  padding:20px;
-  margin-top:20px;
-  color:#ffffff;
-  background-color:#e8491d;
-  text-align: center;
-}
-
-/* Media Queries */
-@media(max-width: 768px){
-  header #branding,
-  header nav,
-  header nav li,
-  #newsletter h1,
-  #newsletter form,
-  #boxes .box,
-  article#main-col,
-  aside#sidebar{
-    float:none;
-    text-align:center;
-    width:100%;
-  }
-
-  header{
-    padding-bottom:20px;
-  }
-
-  #showcase h1{
-    margin-top:40px;
-  }
-
-  #newsletter button, .quote button{
-    display:block;
-    width:100%;
-  }
-
-  #newsletter form input[type="email"], .quote input, .quote textarea{
-    width:100%;
-    margin-bottom:5px;
-  }
-}
-
 </style>
 
 <head>
@@ -237,20 +29,34 @@ footer{
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<meta name="description" content="UNIty">
-	<meta name="keywords" content="UNIty">
+	<meta name="description" content="Hoolie">
+	<meta name="keywords" content="Hoolie">
   	<meta name="author" content="Hackathon">
     <title> Hoolie | Welcome</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-{% extends '__header.html' %}
+{% extends 'provider/layout.html' %}
 {% block body %}
+	<header>
+      <div class="container">
+        <div id="branding">
+          <h1><span class="highlight">Hoolie</h1>
+        </div>
+        <nav>
+          <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="about.html">Profile</a></li>
+            <li><a href="services.html">Messages</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     	
 <div class="container">
     <div class="row">
-      <div class="col-md-3 ">
+      <div class="col-md-3">
       </div>
       <div class="col-md-12">
           <div class="card">
@@ -258,7 +64,7 @@ footer{
                   <div class="row">
                       <div class="col-md-4">
                           <h1 class="my-4"> <small>Hey! What do you need help with today?</small></h1>
-                            <form method="POST" role="form">
+                            <form method="POST" roe="form">
                                 <div class="row">
                                     <div>
                                         <div>Course</div>
@@ -298,24 +104,8 @@ footer{
                                 
                         		</div>
                     		</form>
-                    	<section id="boxes">
-      								<div class="container">
-        							<div class="box">
-          							<img src="./helpSome1.png">
-         							<h3>Help Someone</h3>
-          							<p>Make yourself available to help others and earn points!</p>
-        							</div>
-        							</div>
-
-        							<div class="box">
-          							<img src="./chat.png">
-          							<h3>I need help!</h3>
-          							<p>Get help from other students who have done your course.</p>
-        							</div>
-   							 	</section>
-                	</div>
-                    <!-- right hand side -->
-                      <div>
+                    	</div>
+                    <div>
                       {% if looking %}
 
                        <div class="col-md-2" style="align-items: center">
@@ -337,6 +127,23 @@ footer{
 
                       {% endif %}
                       </div>
+                    </div>
+                    	<section id="boxes">
+      						<div class="flex-container">
+        						<div class="box">
+          							<img src="./helpSome1.png">
+         							<h3>Help Someone</h3>
+          							<p>Make yourself available to help others and earn points!</p>
+        						</div>
+        						<div class="box">
+          							<img src="./chat.png">
+          							<h3>I need help!</h3>
+          							<p>Get help from other students who have done your course.</p>
+          						</div>
+        					</div>
+   						</section>
+                    <!-- right hand side -->
+
                   </div>
               </div>
           </div>
