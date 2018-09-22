@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+
+<head>
+  <title>Hoolie Tutoring</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+{% extends 'provider/layout.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+      <div class="col-md-3 ">
+      </div>
+      <div class="col-md-12">
+          <div class="card">
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col-md-4">
+                          <h1 class="my-4"> <small>Hey! What do you need help with today?</small></h1>
+                            <form method="POST" role="form">
+                                <div class="row">
+                                    <div>
+                                        <div>Course</div>
+                                        <select name="centre" class="form-control here">
+                                            <option value="software_engineering">Software Engineering</option>
+                                            <option value="discrete_maths">Discrete Maths</option>
+                                            <option value="artificial_intelligence">Artificial Intelligence</option>
+                                            <option value="machine_learning">Machine Learning</option>
+                                            <option value="algorithmic_trading">Algorithmic Trading</option>
+                                            <option value="risk_management">Risk Management</option>
+                                        </select>
+                                        &nbsp
+                                    </div>
+                                    <div>
+                                        <div>Duration</div>
+                                        <select name="time" class="form-control here">
+                                            <option value="time15">15 Minutes</option>
+                                            <option value="time30">30 Minutes</option>
+                                            <option value="time45">45 Minutes</option>
+                                            <option value="time60">60 Minutes</option>
+                                        </select>
+                                        &nbsp
+                                    </div>
+                                    <div>
+                                        <div>Distance</div>
+                                        <select name="provider" class="form-control here">
+                                            <option value="100m">100 meters</option>
+                                            <option value="250m">250 meters</option>
+                                            <option value="500m">500 meters</option>
+                                            <option value="1km">1kilometer</option>
+                                        </select>
+                                        &nbsp
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button name="submit" type="submit" class="btn">Get Help</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                      <!-- right hand side -->
+                      <div>
+                      {% if looking %}
+
+                       <div class="col-md-2" style="align-items: center">
+
+                      </div>
+
+                      <div class="col-md-2" style="align-items: center">
+                          &nbsp <div></div>
+                          &nbsp <div></div>
+                          &nbsp <div></div>
+                          &nbsp <div></div>
+                          &nbsp <div></div>
+                          &nbsp <div></div>
+                          &nbsp <div></div>
+                          &nbsp <div></div>
+                          <div class="loader" style="alignment: center"></div>
+
+                      </div>
+
+                      {% endif %}
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+</body>
+
+
