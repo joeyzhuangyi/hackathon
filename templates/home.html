@@ -37,7 +37,7 @@
 </head>
 
 <body>
-{% extends 'provider/layout.html' %}
+{% extends '__header.html' %}
 {% block body %}
 	<header>
       <div class="container">
@@ -47,8 +47,8 @@
         <nav>
           <ul>
             <li class="current"><a href="index.html">Home</a></li>
-            <li><a href="about.html">Profile</a></li>
-            <li><a href="services.html">Messages</a></li>
+            <li><a href={{url_for('hello')}}>Profile</a></li>
+            <li><a href={{url_for('hello')}}>Messages</a></li>
           </ul>
         </nav>
       </div>
