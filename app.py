@@ -8,9 +8,9 @@ student2 = user("olsen matthew","female",3,["Repeating comp1511"],"lazykid")
 
 sample_user_tutor = user("jfk","male",4,["Date Science","AI","Java development","COMP 1521"],["You sucks","Nice experience"])
 """
-@app.route('/')
+@app.route('/',methods=['GET','POST'])
 def home():
-    if request.method == "POST":
+    if request.method == 'POST':
         pass
     return render_template("home.html",looking= True);
 @app.route('/hello')
