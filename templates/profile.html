@@ -1,56 +1,85 @@
 <!DOCTYPE html>
-<html>
-{% extends '__header.html' %}
-{% block body %}
-  	<head>
+<html lang="en">
 
-    	<meta charset="utf-8">
-    	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
-    	<title>Ligma Bowls</title>
+<head>
+  	<title>Hoolie Tutoring</title>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<meta name="description" content="Hoolie">
+	<meta name="keywords" content="Hoolie">
+  	<meta name="author" content="Hackathon">
+    <title> Hoolie | Welcome</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
 
-    	<!-- Latest compiled and minified Bootstrap CSS -->
-    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    	<link rel="stylesheet" href="./styles.css" type="text/css"/>
-
-  	</head>
-	<body>
-
-  	<!--Main container. Everything must be contained within a top-level container.-->
-  	<div class="container-fluid">
-
-    <!--First row (only row)-->
-    <div class="row extra_margin">
-
-      <!-- First column (smaller of the two). Will appear on the left on desktop and on the top on mobile. -->
-      <div class="col-md-4 col-sm-12 col-xs-12">
-
-          <!-- Div to center the header image/name/social buttons -->
-          <div class="text-center">
-
-              <!-- Placeholder image using Placeholder.com -->
-              <img src="http://via.placeholder.com/300x300" class="img-rounded"/>
-
-              <!-- Header text (Person's name) -->
-              <h2></h2>
-
-              <!-- Social buttons using anchor elements and btn-primary class to style -->
-              <p>
-                <a class="btn btn-primary btn-xs" href="#" role="button">Edit Profile</a>
-              </p>
-
-          </div>
-
-      </div> <!-- End Col 1 -->
-
-      <!-- Second column - for small and extra-small screens, will use whatever # cols is available -->
-      <div class="col-md-8 col-sm-* col-xs-*">
-
-        <!-- Placeholder image using Placeholder.com -->
-        <img src="http://via.placeholder.com/900x300" class="img-rounded"/>
+<body>
+	<header>
+      <div class="container">
+        <div id="branding">
+          <h1><span class="highlight">Hoolie</h1>
+        </div>
+        <nav>
+          <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="about.html">Profile</a></li>
+            <li><a href="services.html">Messages</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    	
+<div class="container">
+    <div class="row">
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-12">
+          <div class="card">
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col-md-4">
+                      	<img src="http://via.placeholder.com/400x400" class="img-rounded"/>
         
-        <!-- Horizontal rule to add some spacing between the "lead" and body text -->
-        <hr />
+                          <h1 class="my-4"> <large>Tristan Ranee</large></h1>
+                          <p> Electrical engineering | 1st year  </p>
+                            <form method="POST" roe="form">
+                                <div class="row">
+                                    <div class="col-md-4">
+                        
+                                    </div>
+                                
+                        		</div>
+                        		
+                    		</form>
+                    		
+                    	</div>
+                    	
+                    <div>
+                    
+                       <div class="col-md-2" style="align-items: center">
+
+                      </div>
+
+                      <div class="col-md-2" style="align-items: center">
+                          &nbsp <div></div>
+                          &nbsp <div></div>
+                          &nbsp <div></div>
+                          &nbsp <div></div>
+                          &nbsp <div></div>
+                          &nbsp <div></div>
+                          &nbsp <div></div>
+                          &nbsp <div></div>
+                          <div class="loader" style="alignment: center"></div>
+
+                      </div>
+
+                      </div>
+                    </div>
+                    	
+                    <!-- right hand side -->
+<hr />
 
 		<!-- Header text (Person's name) -->
         <h2>About</h2>
@@ -74,28 +103,29 @@
         <h2>Rating</h2>
         
         <!-- Body text () -->
-        <p>	STARS</p>
+        <p>	5/5</p>
+        <img src="./stars.png" class="stars">
 
 		<!-- Header text (Points) -->
-        <h2>Points</h2>
+        <h2>Total Hoo Coin count</h2>
         
         <!-- Body text (points) -->
-        <p> 1000 Points</p>
+        <p> 1000 Hoo Coins</p>
 		
 		<!-- Header text (Bank) -->
         <h2>Bank</h2>	
 
 		<!-- Body text (bank) -->
-        <p> 200 Points</p>
-        
-      </div> <!-- End column 2 -->
-
-    </div> <!-- End row 1 -->
-
-  </div> <!-- End main container -->
-
-
-
+        <p> 200 Hoo Coins</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    
+  </div>
+  
+  	<footer>
+    	<p>Hoolie, Copyright &copy; 2018</p>
+	</footer>
 </body>
-{% endblock %}
-</html>
