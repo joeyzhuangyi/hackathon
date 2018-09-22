@@ -63,31 +63,31 @@
         <h2>Related tags</h2>
         
         <!-- Body text (paragraph 2) -->
-        <p> 
-        	<a class="btn btn-primary btn-xs" href="#" role="button">ENGG1000</a>
-        	<a class="btn btn-primary btn-xs" href="#" role="button">MATH1231</a>
-        	<a class="btn btn-primary btn-xs" href="#" role="button">ELEC1111</a>
-        	<a class="btn btn-primary btn-xs" href="#" role="button">PHYS1241</a>
-        	<a class="btn btn-primary btn-xs" href="#" role="button">COMP1521</a>
+
+        <p>
+            {% for tag in user.tags %}
+        	<a class="btn btn-primary btn-xs" href="#" role="button">{{tag}}</a>
+            {% end for %}
 		</p>
+
 
 		<!-- Header text (Person's name) -->
         <h2>Rating</h2>
-        
+          <div>
+            {{user.rating}}
+          </div>
         <!-- Body text () -->
         <p>	STARS</p>
-
+          <!-- some star photo goes here -->
 		<!-- Header text (Points) -->
         <h2>Points</h2>
-        
         <!-- Body text (points) -->
-        <p> 1000 Points</p>
-		
+        <p>{{user.point}}</p>
 		<!-- Header text (Bank) -->
         <h2>Bank</h2>	
 
 		<!-- Body text (bank) -->
-        <p> 200 Points</p>
+        <p> {{user.bank}}</p>
         
       </div> <!-- End column 2 -->
 
