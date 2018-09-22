@@ -11,8 +11,8 @@ sample_user_tutor = user("jfk","male",4,["Date Science","AI","Java development",
 @app.route('/',methods=['GET','POST'])
 def home():
     if request.method == 'POST':
-        pass
-    return render_template("home.html",looking= True);
+        return render_template("home.html", looking=True);
+    return render_template("home.html",looking= False);
 @app.route('/hello')
 def hello():
     return "hello world"
