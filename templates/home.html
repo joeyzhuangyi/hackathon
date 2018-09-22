@@ -45,8 +45,7 @@
     	
 <div class="container">
     <div class="row">
-      <div class="col-md-3">
-      </div>
+      <div class="col-md-3"></div>
       <div class="col-md-12">
           <div class="card">
               <div class="card-body">
@@ -88,26 +87,15 @@
                                         &nbsp
                                     </div>
                                     <div class="col-md-4">
-                                        <button name="submit" type="submit" class="btn">Get Help</button>
+                                        <button id ="submit-button" name="submit" type="submit" class="btn" >Get Help</button>
                                     </div>
                                 
                         		</div>
                     		</form>
                     	</div>
-
-                      <script type="text/javascript">
-                          setTimeout(function() {
-                            console.log('hiding timer now');
-                            document.getElementById('spinner').style.display = 'none';
-                        }, 3000);
-                      </script>
-
-                    <div id="spinner">
-
-                      {% if looking %}
-
-                       <div class="col-md-2" style="align-items: center">
-
+                    {% if looking%}
+                    <div id="spinner" style="display:none">
+                      <div class="col-md-2" style="align-items: center">
                       </div>
 
                       <div class="col-md-2" style="align-items: center">
@@ -120,22 +108,15 @@
                           &nbsp <div></div>
                           &nbsp <div></div>
 
-                          <div class="loader" style="alignment: center" id="spinner"></div>
+                          <div class="loader" style="alignment: center;"></div>
                           <p><b>Connect you to 3 people...</b></p>
 
                       </div>
 
                       {% endif %}
-                      </div>
+                    </div>
 
-                      <script type="text/javascript">
-                          setTimeout(function() {
-                            console.log('show text now');
-                            document.getElementById('results').style.display = 'none';
-                        }, 3000);
-                      </script>
-
-                      <div id="results">
+                      <div id="results" style="display:none">
 
                           <h6>
                               <small><b>Cristian Bernal</b> would like to tutor you</small>
@@ -145,7 +126,7 @@
 
                       </div>
 
-                    </div>
+
                     	<section id="boxes">
       						<div class="flex-container">
         						<div class="box">
@@ -171,5 +152,24 @@
   	<footer>
     	<p>Hoolie, Copyright &copy; 2018</p>
 	</footer>
+
+
+<script type="text/javascript">
+                          function handleSubmit(e) {
+                              console.log('handleSubmit')
+                              e.preventDefault()
+                              document.getElementById('spinner').style.display = 'block';
+                              document.getElementById('results').style.display = 'none';
+
+                              setTimeout(function() {
+                                console.log('hiding timer now');
+                                document.getElementById('spinner').style.display = 'none';
+                                document.getElementById('results').style.display = 'block';
+                            }, 3000);
+                          }
+
+                          document.getElementById("submit-button").addEventListener("click", handleSubmit)
+
+                      </script>
 {% endblock %}
 </body>
