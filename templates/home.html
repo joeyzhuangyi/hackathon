@@ -15,51 +15,59 @@
 <div class="container">
     <div class="row">
       <div class="col-md-3 ">
-
       </div>
       <div class="col-md-12">
           <div class="card">
               <div class="card-body">
                   <div class="row">
-                      <div class="col-md-12">
-                          <h1 class="my-4"> <small>Search</small></h1>
-                            <div class="container">
-                            <div class="row">
-                               <div id="custom-search-input">
-                                    <div class="input-group col-md-12">
-                                        <input type="text" class="  search-query form-control" placeholder="Search" />
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-primary" type="button">
-                                                <span class=" glyphicon glyphicon-search"></span>
-                                            </button>
-                                        </span>
+                      <div class="col-md-4">
+                          <h1 class="my-4"> <small>Hey! What do you need help with today?</small></h1>
+                            <form method="POST" role="form">
+                                <div class="row">
+                                    <div>
+                                        <div>Course</div>
+                                        <select name="centre" class="form-control here">
+                                            <option value="software_engineering">Software Engineering</option>
+                                            <option value="discrete_maths">Discrete Maths</option>
+                                            <option value="artificial_intelligence">Artificial Intelligence</option>
+                                            <option value="machine_learning">Machine Learning</option>
+                                            <option value="algorithmic_trading">Algorithmic Trading</option>
+                                            <option value="risk_management">Risk Management</option>
+                                        </select>
+                                        &nbsp
+                                    </div>
+                                    <div>
+                                        <div>Duration</div>
+                                        <select name="time" class="form-control here">
+                                            <option value="time15">15 Minutes</option>
+                                            <option value="time30">30 Minutes</option>
+                                            <option value="time45">45 Minutes</option>
+                                            <option value="time60">60 Minutes</option>
+                                        </select>
+                                        &nbsp
+                                    </div>
+                                    <div>
+                                        <div>Distance</div>
+                                        <select name="provider" class="form-control here">
+                                            <option value="100m">100 meters</option>
+                                            <option value="250m">250 meters</option>
+                                            <option value="500m">500 meters</option>
+                                            <option value="1km">1kilometer</option>
+                                        </select>
+                                        &nbsp
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button name="submit" type="submit" class="btn">Get Help</button>
                                     </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
-                          <hr>
+                      <!-- right hand side -->
                           <tr>
                             <td>
-                                {% for i in hashtags%}
-                                <button class="btn btn-primary">{{ i }}</button>
-                                {% endfor %}
+                                
                             </td>
                             </tr>
-                          <hr>
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col-md-12">
-                          <form>
-                                <div class="form-group row">
-                                  <label for="name" class="col-4 col-form-label">Full Name</label>
-                                  <div class="col-8">
-                                      {% for i in patients %}
-                                      <h4>{{i.first_name}} {{i.surname}}</h4>
-                                      {% endfor %}
-                                  </div>
-                                </div>
-                              </form>
                       </div>
                   </div>
               </div>
