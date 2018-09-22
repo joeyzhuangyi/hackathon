@@ -22,6 +22,8 @@ def profile():
 @app.route('/tutor')
 def tutor():
     return render_template('tutor.html')
-
+@app.route('/profile2')
+def profile2():
+    return render_template('profile2.html')
 if __name__ == '__main__':
     app.run( debug=True)
