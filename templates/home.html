@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-
 <html lang="en">
-{% extends '__header.html' %}
-{% block body %}
+
 <style>
 .loader {
   border: 16px solid #f3f3f3;
@@ -13,13 +11,11 @@
   -webkit-animation: spin 2s linear infinite; /* Safari */
   animation: spin 2s linear infinite;
 }
-
 /* Safari */
 @-webkit-keyframes spin {
   0% { -webkit-transform: rotate(0deg); }
   100% { -webkit-transform: rotate(360deg); }
 }
-
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -27,16 +23,37 @@
 </style>
 
 <head>
-  <title>Hoolie Tutoring</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<title>Hoolie Tutoring</title>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<meta name="description" content="UNIty">
+	<meta name="keywords" content="UNIty">
+  	<meta name="author" content="Hackathon">
+    <title> Hoolie | Welcome</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-
+{% extends 'provider/layout.html' %}
+{% block body %}
+	<header>
+      <div class="container">
+        <div id="branding">
+          <h1><span class="highlight">Hoolie</h1>
+        </div>
+        <nav>
+          <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="about.html">Profile</a></li>
+            <li><a href="services.html">Messages</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    	
 <div class="container">
     <div class="row">
       <div class="col-md-3 ">
@@ -84,10 +101,26 @@
                                     <div class="col-md-4">
                                         <button name="submit" type="submit" class="btn">Get Help</button>
                                     </div>
-                                </div>
-                            </form>
-                        </div>
-                      <!-- right hand side -->
+                                
+                        		</div>
+                    		</form>
+                    	<section id="boxes">
+      								<div class="container">
+        							<div class="box">
+          							<img src="./helpSome1.png">
+         							<h3>Help Someone</h3>
+          							<p>Make yourself available to help others and earn points!</p>
+        							</div>
+        							</div>
+
+        							<div class="box">
+          							<img src="./chat.png">
+          							<h3>I need help!</h3>
+          							<p>Get help from other students who have done your course.</p>
+        							</div>
+   							 	</section>
+                	</div>
+                    <!-- right hand side -->
                       <div>
                       {% if looking %}
 
@@ -116,8 +149,8 @@
       </div>
     </div>
   </div>
-
-</body>
+  	<footer>
+    	<p>Hoolie, Copyright &copy; 2018</p>
+	</footer>
 {% endblock %}
-</html>
-
+</body>
